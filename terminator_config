@@ -1,0 +1,4 @@
+/* Use this file as config, with this comment removed*/
+[keybindings]
+  split_horiz = <Alt><Shift>D
+  split_vert = <Alt>D
