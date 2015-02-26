@@ -3,7 +3,7 @@ tig (git branching)
 rbenv (install, rehash, ruby-build plugin) set global version of ruby to 2.1.5
 install bundler with ruby 2.1.5
 vim (install)
-vundler ( vim plugin management tools ) 
+pathogen ( vim plugin management tools ) 
   |
   --- 1. NERDtree
   --- 2. ctrlp
