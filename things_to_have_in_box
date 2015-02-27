@@ -1,27 +1,32 @@
-git (install)
+git (install) ( latest version by using their apt-resource, not the default ubuntu repo. It is very old 1.9. Latest is 2.3 )
 tig (git branching)
-rbenv (install, rehash, ruby-build plugin) set global version of ruby to 2.1.5
-install bundler with ruby 2.1.5
+rbenv (install, rehash, ruby-build plugin) set global version of ruby to 2.1.5. ( Ruby version in ubuntu repo is very old. 1.8.7. We need 2.1.5 )
+install bundler with ruby 2.1.5 ( This is very fundamental to ruby eco-system. It is its package manager. We install libraries via it. Make sure you install 
+                                  this after switching ruby to 2.1.5. So that you get the bundler version compatible to your ruby version ) 
 vim (install)
-pathogen ( vim plugin management tools ) 
+pathogen ( vim plugin management tools ) ( Optional. But I like them. No need to be there on server though )
   |
   --- 1. NERDtree
   --- 2. ctrlp
   ----3. Rails plugin
 
-postgres (install)
+postgres (install) ( Yeah these are shell command, you have to translate them to ansible )
   |
   ------- sudo apt-get install postgresql postgresql-server-dev-9.1
   ------- sudo apt-get install postgresql postgresql-contrib
   ------- one DB role with createDB permissions ( create role; alter role <name> CREATEDB; alter role <name> PASSWORD '<password>';
 
-copy all the dot files
+copy all the dot files ( Not needed )
 
-javascript (node)
+javascript (node) ( Very much needed, rails asset compilation ( js, css, images etc ) depends upon node. Again Install it via their repo. Ubuntu has got very old version )
 
-aliases ( bash, git etc.)
+aliases ( bash, git etc.) ( Not needed )
 
-rails 4.2.0 does not bind 0.0.0.0:3000 but 127.0.0.1:3000
+rails 4.2.0 does not bind 0.0.0.0:3000 but 127.0.0.1:3000 ( Not needed )
 create new ./config/database.yml file for every project
 
-rails 4.2.0 support for rspec-rails start from 3.1.0
+rails 4.2.0 support for rspec-rails start from 3.1.0 ( Not needed )
+
+Once you are done with this. We will have to do few more things. We will have to do few more things like
+
+Configuring /etc/nginx/nginx.conf server block {}, to host our application. ( This step will be more relevant when we will have code. For now I will give you one sample codebase. You can use it.)
