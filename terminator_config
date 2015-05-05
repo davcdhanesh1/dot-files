@@ -2,3 +2,4 @@
 [keybindings]
   split_horiz = <Alt><Shift>D
   split_vert = <Alt>D
+  go_next = <Ctrl>n

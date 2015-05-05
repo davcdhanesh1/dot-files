@@ -30,3 +30,6 @@ rails 4.2.0 support for rspec-rails start from 3.1.0 ( Not needed )
 Once you are done with this. We will have to do few more things. We will have to do few more things like
 
 Configuring /etc/nginx/nginx.conf server block {}, to host our application. ( This step will be more relevant when we will have code. For now I will give you one sample codebase. You can use it.)
+
+
+Installing terminator: Just follow instruction on their site.
