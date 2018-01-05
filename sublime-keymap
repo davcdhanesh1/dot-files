@@ -1,0 +1,22 @@
+[
+	{ "keys": ["super+\\"], "command": "toggle_side_bar" },
+	{ "keys": ["super+shift+\\"], "command": "reveal_in_side_bar"},
+	{ "keys": ["super+shift+w"], "command": "close_other_tabs" },
+
+	{ "keys": ["super+backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+
+	{ "keys": ["super+shift+b"], "command": "goto_symbol_in_project" },
+	{ "keys": ["super+b"], "command": "goto_definition" },
+
+	{ "keys": ["super+shift+t"], "command": "reopen_last_file" },
+
+ 	{ "keys": ["super+k", "super+up"], "command": "create_pane", "args": {"direction": "up", "give_focus": true} },
+  { "keys": ["super+k", "super+right"], "command": "create_pane", "args": {"direction": "right", "give_focus": true} },
+  { "keys": ["super+k", "super+down"], "command": "create_pane", "args": {"direction": "down", "give_focus": true} },
+  { "keys": ["super+k", "super+left"], "command": "create_pane", "args": {"direction": "left", "give_focus": true} },
+  { "keys": ["super+k", "super+w"], "command": "destroy_pane", "args": {"direction": "self"} },
+
+	{ "keys": ["super+shift+c"], "command": "side_bar_copy_path_absolute_from_project" },
+  { "keys": ["shift+f6"], "command": "side_bar_rename" },
+	{ "keys": ["super+shift+m"], "command": "side_bar_move" }
+]
