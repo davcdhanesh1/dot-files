@@ -1,0 +1,12 @@
+{
+	"font_size": 17,
+	"ignored_packages":
+	[
+		"Markdown",
+		"Vintage"
+	],
+	"scroll_speed": 20,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": false,
+	"trim_trailing_white_sapce_on_save": true
+}
