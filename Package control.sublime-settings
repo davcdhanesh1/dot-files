@@ -1,0 +1,28 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"All Autocomplete",
+		"auto-save",
+		"CloseOtherWindows",
+		"GoSublime",
+		"MarkdownEditing",
+		"Nodejs",
+		"Origami",
+		"Package Control",
+		"Pretty JSON",
+		"Python 3",
+		"RailsGoToSpec",
+		"React IDE",
+		"RuboCop",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeLinter-ruby",
+		"TrailingSpaces",
+		"TypeScript"
+	]
+}
