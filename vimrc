@@ -30,8 +30,7 @@ call plug#end()
 
 set autowrite
 set showcmd
-autocmd Filetype go command! -bang Gv call go#alternate#Switch(<bang>0, 'vsplit')
-autocmd Filetype go command! -bang Gh call go#alternate#Switch(<bang>0, 'split')
+autocmd Filetype go command! -bang Gt call go#alternate#Switch(<bang>0, 'tabnew')
 
 let mapleader = "g"
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
@@ -43,8 +42,7 @@ autocmd FileType go nnoremap <leader>Q :lclose<CR>
 autocmd FileType go map <leader>n :cnext<CR>
 autocmd FileType go map <leader>p :cprevious<CR>
 autocmd FileType go map <leader>f :GoTestFunc<CR>
-autocmd FileType go map <leader>T :Gh<CR>
-autocmd FileType go map <leader>Tv :Gv<CR>
+autocmd FileType go map <leader>T :Gt<CR>
 autocmd FileType go map <leader>I :GoImports<CR>
 autocmd FileType go map <leader>9 :GoDecls<CR>
 autocmd FileType go map <leader>R :GoRename<CR>
