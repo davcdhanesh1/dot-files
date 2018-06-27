@@ -1,3 +1,4 @@
+filetype plugin indent on
 syntax enable
 set smartindent
 set nu
@@ -22,10 +23,17 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+noremap <C-n> :tabnew<CR>
+noremap <C-l> :tabNext<CR>
+noremap <C-h> :tabp<CR>
+noremap <C-k> :tabclose<CR>
+
 call plug#begin()
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'SirVer/ultisnips'
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'fatih/molokai'
+Plug 'guns/vim-sexp'
 call plug#end()
 
 set autowrite
@@ -47,7 +55,7 @@ autocmd FileType go map <leader>I :GoImports<CR>
 autocmd FileType go map <leader>9 :GoDecls<CR>
 autocmd FileType go map <leader>R :GoRename<CR>
 
-let g:go_auto_sameids = 1
+let g:go_auto_sameids = 0
 let g:go_fmt_command = "goimports"
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
@@ -55,6 +63,11 @@ let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_operators = 1
-let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_enabled = ['vet', 'errcheck']
 let g:go_metalinter_autosave = 1
-let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_autosave_enabled = ['vet']
+
+let g:rehash256 = 1
+let g:molokai_original = 1
+colorscheme molokai
+let @y = 'i"^[f=ha"^[lr:a{^M"value": "^[$a",^M"type": "value",<80>kb^M},^[j0'
