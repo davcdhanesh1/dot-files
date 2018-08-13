@@ -34,6 +34,8 @@ Plug 'SirVer/ultisnips'
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'fatih/molokai'
 Plug 'guns/vim-sexp'
+Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 set autowrite
@@ -70,4 +72,3 @@ let g:go_metalinter_autosave_enabled = ['vet']
 let g:rehash256 = 1
 let g:molokai_original = 1
 colorscheme molokai
-let @y = 'i"^[f=ha"^[lr:a{^M"value": "^[$a",^M"type": "value",<80>kb^M},^[j0'
