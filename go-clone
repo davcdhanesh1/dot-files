@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+=begin
+  USAGE: ./clone.rb <https-url-of-git-repo>
+  
+  What it does: Clones the repo into nested directory structure in your system's GOPATH
+=end
+
+repo = ARGV[0]
+go_path = `go env GOPATH`.split("\n")[0]
+go_src_location = "#{go_path}/src"
+directory_tree = repo.split("https://")[1].split("/")
+directory_tree.delete_at(directory_tree.length - 1)
+
+clone_location_path = "#{go_src_location}/#{directory_tree.join("/")}"
+Dir.mkdir(clone_location_path) unless File.exist? clone_location_path
+
+Dir.chdir(clone_location_path) do 
+  `git clone #{repo}`
+end
