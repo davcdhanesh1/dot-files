@@ -22,6 +22,22 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+function Replace()
+  let l:find = input("find: ")
+  let l:replace = input("replace-with: ")
+  echo "\n"
+  echom "Replacing" l:find "with" l:replace
+  let l:cmd =
+        \"args `ack -l --ignore-dir=docs ". l:find. "`".
+        \"| argdo %s/". l:find. "/". l:replace. "/gc".
+        \"| update"
+  echom l:cmd
+  tabnew
+  exe l:cmd
+  tabclose $
+endfunction
+noremap <C-S-R> :call Replace()<CR>
+
 noremap <A-4> :ccl<CR>
 noremap <C-n> :tabnew<CR>
 noremap <C-l> :tabNext<CR>
@@ -45,6 +61,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'https://github.com/tpope/vim-fugitive'
+Plug 'https://github.com/mtth/scratch.vim'
 call plug#end()
 
 set autowrite
